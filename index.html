@@ -59,12 +59,43 @@
 <div id="out"></div>
 <p class="note">Masukkan bilangan bulat 0 sampai 9.999.999.</p>
 </section>
+<aside class="kopi kwrap" id="kotakKopi" aria-labelledby="kopiJudul">
+<div class="kcup" data-cup aria-hidden="true"></div>
+<div class="kisi">
+<h2 id="kopiJudul">Traktir kopi ☕</h2>
+<p>Kalau web ini bermanfaat dan membantu belajar, boleh traktir kopi untuk pembuatnya. Terima kasih banyak!</p>
+<div class="rek">
+<div><span class="bank">Transfer BCA a.n. <span class="k-nama"></span></span><strong class="k-rek"></strong></div>
+<button class="btn salin" type="button">Salin nomor</button>
+</div>
+<p class="note salinInfo" aria-live="polite"></p>
+</div>
+</aside>
 </main>
+
+<button class="kofab" id="kofab" type="button" aria-haspopup="dialog">
+<span class="kcup" data-cup aria-hidden="true"></span><span>Traktir kopi</span>
+</button>
+
+<div class="kmodal" id="kmodal" hidden>
+<div class="kcard kwrap" role="dialog" aria-modal="true" aria-labelledby="kmJudul">
+<div class="kcup big" data-cup aria-hidden="true"></div>
+<h2 id="kmJudul">Traktir kopi ☕</h2>
+<p>Kalau web ini bermanfaat dan membantu, boleh traktir kopi untuk pembuatnya. Berapa pun sangat berarti.</p>
+<div class="rek">
+<div><span class="bank">Transfer BCA a.n. <span class="k-nama"></span></span><strong class="k-rek"></strong></div>
+<button class="btn salin" type="button">Salin nomor</button>
+</div>
+<p class="note salinInfo" aria-live="polite"></p>
+<button class="btn alt" id="ktutup" type="button" style="width:100%">Nanti saja</button>
+</div>
+</div>
 
 <script src="js/utils.js"></script>
 <script src="js/tabs.js"></script>
 <script src="js/table.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/calc.js"></script>
+<script src="js/kopi.js"></script>
 </body>
 </html>
