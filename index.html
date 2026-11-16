@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Belajar Hitung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+<h1>Belajar <mark>Hitung</mark></h1>
+<p class="sub">Hafalkan tabel perkalian, lalu pelajari cara menghitung langkah demi langkah.</p>
+<nav role="tablist">
+<button role="tab" aria-selected="true" data-t="t1">Tabel</button>
+<button role="tab" aria-selected="false" data-t="t2">Latihan</button>
+<button role="tab" aria-selected="false" data-t="t3">Hitung</button>
+</nav>
+
+<section id="t1">
+<div class="row">
+<button class="btn" id="hideBtn">Tutup jawaban</button>
+<span class="note" style="margin:0">Ketuk kotak untuk melihat hasilnya.</span>
+</div>
+<div class="info" id="info" aria-live="polite">Ketuk angka mana saja</div>
+<div class="tw"><table id="tbl"></table></div>
+</section>
+
+<section id="t2" hidden>
+<div class="row">
+<label for="sel">Latihan tabel</label>
+<select id="sel"></select>
+<button class="btn alt" id="reset">Mulai ulang</button>
+</div>
+<div class="q" id="q" aria-live="polite"></div>
+<div class="ans">
+<input type="number" id="in" inputmode="numeric" aria-label="Jawaban" autocomplete="off">
+<button class="btn" id="chk">Cek</button>
+</div>
+<div class="fb" id="fb" aria-live="polite"></div>
+<div class="stats"><span>Benar <b id="sc">0</b></span><span>Soal <b id="tot">0</b></span><span>Beruntun <b id="st">0</b></span></div>
+<div class="wrong" id="wr"></div>
+</section>
+
+<section id="t3" hidden>
+<div class="ops" id="ops">
+<button data-o="+" aria-pressed="true">+<small>tambah</small></button>
+<button data-o="-" aria-pressed="false">−<small>kurang</small></button>
+<button data-o="*" aria-pressed="false">×<small>kali</small></button>
+<button data-o="/" aria-pressed="false">÷<small>bagi</small></button>
+</div>
+<div class="nums">
+<input type="text" id="na" inputmode="numeric" maxlength="7" value="478" aria-label="Angka pertama">
+<span id="sym">+</span>
+<input type="text" id="nb" inputmode="numeric" maxlength="7" value="256" aria-label="Angka kedua">
+</div>
+<button class="btn" id="go" style="width:100%">Hitung langkah demi langkah</button>
+<div id="out"></div>
+<p class="note">Masukkan bilangan bulat 0 sampai 9.999.999.</p>
+</section>
+<aside class="kopi kwrap" id="kotakKopi" aria-labelledby="kopiJudul">
+<div class="kcup" data-cup aria-hidden="true"></div>
+<div class="kisi">
+<h2 id="kopiJudul">Traktir kopi ☕</h2>
+<p>Kalau web ini bermanfaat dan membantu belajar, boleh traktir kopi untuk pembuatnya. Terima kasih banyak!</p>
+<div class="rek">
+<div><span class="bank">Transfer BCA a.n. <span class="k-nama"></span></span><strong class="k-rek"></strong></div>
+<button class="btn salin" type="button">Salin nomor</button>
+</div>
+<p class="note salinInfo" aria-live="polite"></p>
+</div>
+</aside>
+</main>
+
+<button class="kofab" id="kofab" type="button" aria-haspopup="dialog">
+<span class="kcup" data-cup aria-hidden="true"></span><span>Traktir kopi</span>
+</button>
+
+<div class="kmodal" id="kmodal" hidden>
+<div class="kcard kwrap" role="dialog" aria-modal="true" aria-labelledby="kmJudul">
+<div class="kcup big" data-cup aria-hidden="true"></div>
+<h2 id="kmJudul">Traktir kopi ☕</h2>
+<p>Kalau web ini bermanfaat dan membantu, boleh traktir kopi untuk pembuatnya. Berapa pun sangat berarti.</p>
+<div class="rek">
+<div><span class="bank">Transfer BCA a.n. <span class="k-nama"></span></span><strong class="k-rek"></strong></div>
+<button class="btn salin" type="button">Salin nomor</button>
+</div>
+<p class="note salinInfo" aria-live="polite"></p>
+<button class="btn alt" id="ktutup" type="button" style="width:100%">Nanti saja</button>
+</div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/table.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/calc.js"></script>
+<script src="js/kopi.js"></script>
+</body>
+</html>
